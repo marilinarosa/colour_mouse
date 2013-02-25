@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <head>
 	<style>
-
+	html, body {
+		height: 100%;
+		width: 100%;
+	}
 
 	</style>
 
@@ -18,8 +21,20 @@
 <script src="jquery-1.8.0.min.js"></script>
 
 <script>
-	$("body").on("mousemove",function(evt) {
-		$("h1").text(event.pageX + "," + event.pageY)
+	$("body").on("mousemove",function(evt) 
+
+		var distanceLeft = event.clientX / document.body.clientWidth;
+		var distanceTop
+
+
+
+
+$("h1").text(event.pageX + "," + event.pageY)
+
+//create a HSL colour based on the percentage we've travelled in left and top directions 
+
+
+
 	});
 
 </script>
