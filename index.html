@@ -32,6 +32,18 @@ $("h1").text(distanceLeft + "," + distanceTop);
 
 //create a HSL colour based on the percentage we've travelled in left and top directions 
 
+	//hue is between 0 - 360 
+	var hue = distanceLeft * 360; // 0.5 = 180, 0.75 = 270
+	//saturation is between 0& - 100%
+	var saturation = 20 + (distanceTop * 80)
+	//lightness is between 0% - 100% 
+	var lightness = 80; 
+
+	var hsl = "hsl(" + hue + "," + saturation + "%," + lightness + "%)"
+
+	//hsl(x,y,z)
+
+	$("h1").html(hsl)
 
 
 	});
