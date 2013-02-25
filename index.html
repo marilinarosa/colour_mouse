@@ -16,6 +16,8 @@
 
 <h1>0,0</h1>
 
+<h2> Click me to pause so you can copy the hsl colour</h2>
+
 
 <!-- jquery loads -->
 <script src="jquery-1.8.0.min.js"></script>
@@ -39,12 +41,12 @@ $("h1").text(distanceLeft + "," + distanceTop);
 	//lightness is between 0% - 100% 
 	var lightness = 80; 
 
-	var hsl = "hsl(" + hue + "," + saturation + "%," + lightness + "%)"
+	var hsl = "hsl(" + hue.toFixed(0) + "," + saturation.toFixed(0) + "%," + lightness + "%)"
 
 	//hsl(x,y,z)
 
 	$("h1").html(hsl)
-
+	$("body").css("background",hsl);
 
 	});
 
