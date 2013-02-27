@@ -27,8 +27,14 @@
 
 		// var = variable 
 		var distanceLeft = event.clientX / document.body.clientWidth;
-		var distanceTop = event.clientY / document.body.clientHeight;
+ 		var distanceTop = event.clientY / document.body.clientHeight;
+
+
+	
+ 	$("body").off("click",function(evt) {
 		
+ 	
+
 
 $("h1").text(distanceLeft + "," + distanceTop);
 
@@ -39,7 +45,7 @@ $("h1").text(distanceLeft + "," + distanceTop);
 	//saturation is between 0& - 100%
 	var saturation = 20 + (distanceTop * 80)
 	//lightness is between 0% - 100% 
-	var lightness = 80; 
+	var lightness = 60; 
 
 	var hsl = "hsl(" + hue.toFixed(0) + "," + saturation.toFixed(0) + "%," + lightness + "%)"
 
